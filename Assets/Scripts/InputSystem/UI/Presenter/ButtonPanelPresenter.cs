@@ -41,7 +41,8 @@ namespace InputSystem.UI.Presenter
             //TODO разнести создание команд
             if(executor as CommandExecutorBase<IProduceUnitEllenCommand>)
             {
-                executor.Execute(_context.InjectMet(new ProduceUnitElenCommand()));
+                //executor.Execute(_context.InjectMet(new ProduceUnitElenCommand()));
+                executor.Execute(_context.Inject(new ProduceUnitElenCommand()));
             }
             else if(executor as CommandExecutorBase<IProduceUnitChomperCommand>)
             {
@@ -49,11 +50,11 @@ namespace InputSystem.UI.Presenter
             }
             else if (executor as CommandExecutorBase<IAttackCommand>)
             {
-                executor.Execute(_context.InjectMet(new AttackUnitCommand()));
+                executor.Execute(_context.Inject(new AttackUnitCommand()));
             }
             else if (executor as CommandExecutorBase<IMoveCommand>)
             {
-                executor.Execute(_context.InjectMet(new MoveUnitCommand()));
+                executor.Execute(_context.Inject(new MoveUnitCommand()));
             }
             else
             {

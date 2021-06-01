@@ -1,6 +1,7 @@
 using Abstractions;
 using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace InputSystem
 {
@@ -8,6 +9,7 @@ namespace InputSystem
     {
         //[InjectAsset("Ellen")] public GameObject _unitPrefab; //на уроке только так получилось
        [InjectAsset("Ellen")] private GameObject _unitPrefab;
+       [Inject] private GameObject _unit;
         public GameObject UnitPrefab => _unitPrefab;//  { get; }
     }
 

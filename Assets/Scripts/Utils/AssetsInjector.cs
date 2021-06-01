@@ -9,7 +9,7 @@ namespace Utils
         public static T Inject<T>(this AssetContext context, T target)
         {
             var targetType = target.GetType();
-            var fields = targetType.GetFields();
+            var fields = targetType.GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly);
             foreach (var field in fields)
             {
                 //var injectAssetAttribute = field.GetCustomAttributes(typeof(InjectAssetAttribute)) as InjectAssetAttribute;
