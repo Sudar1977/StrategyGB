@@ -3,7 +3,7 @@ using Utils;
 using Zenject;
 namespace InputSystem.UI.Model
 {
-    public class ModelInstaller : MonoInstallerBase
+    public class ModelInstaller : MonoInstaller
     {
         [SerializeField] private AssetContext _context;
         public override void InstallBindings()
