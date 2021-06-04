@@ -16,16 +16,14 @@ namespace InputSystem.UI.Model
 
     public class ProduceUnitElenCommand : IProduceUnitEllenCommand
     {
-//      [InjectAsset("Ellen")] public GameObject _unitPrefab; //на уроке только так получилось
         [InjectAsset("Ellen")] private GameObject _unitPrefab;
-        public GameObject UnitPrefab => _unitPrefab;//  { get; }
+        public GameObject UnitPrefab => _unitPrefab;
     }
 
     public class ProduceUnitChomperCommand : IProduceUnitChomperCommand
     {
-        //[InjectAsset("Chomper")] public GameObject _unitPrefab; //не уроке только так получилось
         [InjectAsset("Chomper")] private GameObject _unitPrefab;
-        public GameObject UnitPrefab => _unitPrefab;//  { get; }
+        public GameObject UnitPrefab => _unitPrefab;
     }
 
     public class AttackUnitCommand : IAttackCommand

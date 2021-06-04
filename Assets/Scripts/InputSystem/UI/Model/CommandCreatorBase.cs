@@ -27,7 +27,17 @@ namespace InputSystem.UI.Model
         }
     }
 
-    public class MoveCommand : CommandCreatorBase<IMoveCommand>
+    public class ProduceUnitChpmperCommandCreator : CommandCreatorBase<IProduceUnitChomperCommand>
+    {
+        [Inject] private AssetContext _context;
+        protected override void CreateSpecificCommand(Action<IProduceUnitChomperCommand> onCreate)
+        {
+            onCreate?.Invoke(_context.Inject(new ProduceUnitChomperCommand()));
+        }
+    }    
+    
+    
+    public class MoveCommandCreator : CommandCreatorBase<IMoveCommand>
     {
         protected override void CreateSpecificCommand(Action<IMoveCommand> onCreate)
         {
