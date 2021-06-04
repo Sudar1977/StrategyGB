@@ -6,6 +6,7 @@ using System.Collections;
 using System.Linq;
 using UnityEngine;
 using Utils;
+using Zenject;
 
 namespace InputSystem.UI.Presenter
 {
@@ -13,7 +14,8 @@ namespace InputSystem.UI.Presenter
     {
         [SerializeField] SelectedItem _item;
         [SerializeField] ButtonPanelView _view;
-        [SerializeField] private AssetContext _context;
+        //[SerializeField] private AssetContext _context;
+        [Inject] private ButtonPanel _buttonPanel;
 
         private ISelectableItem _currentSelected;
         // Use this for initialization
@@ -39,29 +41,32 @@ namespace InputSystem.UI.Presenter
         private void HandleClick(ICommandExecutor executor)
         {
             Debug.Log("Click handled wigh executor "+executor.GetType().Name);
+            _buttonPanel.HandleClick(executor);
             //executor.Execute(new Command);
             //TODO разнести создание команд
-            if(executor as CommandExecutorBase<IProduceUnitEllenCommand>)
-            {
-                //executor.Execute(_context.InjectMet(new ProduceUnitElenCommand()));
-                executor.Execute(_context.Inject(new ProduceUnitElenCommand()));
-            }
-            else if(executor as CommandExecutorBase<IProduceUnitChomperCommand>)
-            {
-                executor.Execute(_context.InjectMet(new ProduceUnitChomperCommand()));
-            }
-            else if (executor as CommandExecutorBase<IAttackCommand>)
-            {
-                executor.Execute(_context.Inject(new AttackUnitCommand()));
-            }
-            else if (executor as CommandExecutorBase<IMoveCommand>)
-            {
-                executor.Execute(_context.Inject(new MoveUnitCommand()));
-            }
-            else
-            {
-                Debug.Log("TODO not handled command");
-            }
+            //return;
+            ////старый код для анализа
+            //if (executor as CommandExecutorBase<IProduceUnitEllenCommand>)
+            //{
+            //    //executor.Execute(_context.InjectMet(new ProduceUnitElenCommand()));
+            //    executor.Execute(_context.Inject(new ProduceUnitElenCommand()));
+            //}
+            //else if(executor as CommandExecutorBase<IProduceUnitChomperCommand>)
+            //{
+            //    executor.Execute(_context.InjectMet(new ProduceUnitChomperCommand()));
+            //}
+            //else if (executor as CommandExecutorBase<IAttackCommand>)
+            //{
+            //    executor.Execute(_context.Inject(new AttackUnitCommand()));
+            //}
+            //else if (executor as CommandExecutorBase<IMoveCommand>)
+            //{
+            //    executor.Execute(_context.Inject(new MoveUnitCommand()));
+            //}
+            //else
+            //{
+            //    Debug.Log("TODO not handled command");
+            //}
         }
     }
 }

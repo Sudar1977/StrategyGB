@@ -9,6 +9,7 @@ namespace InputSystem.UI.Model
         public override void InstallBindings()
         {
             Container.Bind<AssetContext>().FromInstance(_context).AsSingle();
+
         }
     }
 }

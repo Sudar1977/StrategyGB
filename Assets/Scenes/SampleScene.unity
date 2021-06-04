@@ -2244,6 +2244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 963194227}
   _currentSelection: {fileID: 11400000, guid: 0e8ee7e92c93c0e4abc6056e4bc20426, type: 2}
+  _currentGroundPosition: {fileID: 11400000, guid: d2afa49f490e1594e9db3e6a976e9fd3, type: 2}
   _eventSystem: {fileID: 1289891299}
 --- !u!4 &1636185502
 Transform:
