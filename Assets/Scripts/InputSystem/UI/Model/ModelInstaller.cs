@@ -12,6 +12,7 @@ namespace InputSystem.UI.Model
             Container.Bind<AssetContext>().FromInstance(_context).AsSingle();
             
             Container.Bind<CommandCreatorBase<IProduceUnitEllenCommand>>().To<ProduceUnitElenCommandCreator>().AsTransient();
+            Container.Bind<CommandCreatorBase<IProduceUnitChomperCommand>>().To<ProduceUnitChopmperCommandCreator>().AsTransient();
             Container.Bind<CommandCreatorBase<IMoveCommand>>().To<MoveCommandCreator>().AsTransient();
             
             Container.Bind<ButtonPanel>().AsTransient();

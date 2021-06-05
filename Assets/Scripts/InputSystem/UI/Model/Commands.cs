@@ -36,6 +36,7 @@ namespace InputSystem.UI.Model
 
     }
     public class ProduceUnitCommandHeir : ProduceUnitCommand
+    //public class ProduceUnitCommandHeir : ProduceUnitElenCommand
     {
 
     }

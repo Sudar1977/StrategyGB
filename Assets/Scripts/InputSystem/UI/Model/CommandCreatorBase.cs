@@ -27,7 +27,7 @@ namespace InputSystem.UI.Model
         }
     }
 
-    public class ProduceUnitChpmperCommandCreator : CommandCreatorBase<IProduceUnitChomperCommand>
+    public class ProduceUnitChopmperCommandCreator : CommandCreatorBase<IProduceUnitChomperCommand>
     {
         [Inject] private AssetContext _context;
         protected override void CreateSpecificCommand(Action<IProduceUnitChomperCommand> onCreate)
