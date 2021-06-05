@@ -23,7 +23,7 @@ namespace Abstractions
 
     public interface IMoveCommand : ICommand
     {
-        //Vector3 Position { get; } 
+        Vector3 Position { get; } 
     }
 
     public interface IAttackCommand : ICommand

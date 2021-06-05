@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 6209947105950598200}
   - component: {fileID: 6745971056021116104}
   - component: {fileID: -3699685136444862639}
-  - component: {fileID: 1810147311081695933}
   - component: {fileID: 7504001906849950965}
   m_Layer: 0
   m_Name: Ellen
@@ -185,18 +184,9 @@ MonoBehaviour:
   - {fileID: 8941887837643847952}
   _outlineMaterial: {fileID: 2100000, guid: 78709a981febc92439be3f83ee31243e, type: 2}
   _circle: {fileID: 903554175749301711}
---- !u!114 &1810147311081695933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8941887837657445876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bab82d1f750031f41a63f1827ebb1e27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _isMaterialSelection: 1
+  _isOutlineSelection: 1
+  _isCircleSelection: 1
 --- !u!114 &7504001906849950965
 MonoBehaviour:
   m_ObjectHideFlags: 0

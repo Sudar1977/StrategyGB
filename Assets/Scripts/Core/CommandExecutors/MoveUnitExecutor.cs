@@ -4,12 +4,14 @@ using UnityEngine;
 
 namespace Core
 {
-    public class MoveCommand : CommandExecutorBase<IMoveCommand>
+    public class MoveUnitExecutor : CommandExecutorBase<IMoveCommand>
     {
 
 
         protected override void ExecuteConcreteCommand(IMoveCommand command)
         {
+            //ToDo сделать плавное перемещение во времени
+            transform.position = command.Position;
             Debug.Log("MoveCommand");
         }
     }

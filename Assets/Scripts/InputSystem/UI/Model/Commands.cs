@@ -33,6 +33,13 @@ namespace InputSystem.UI.Model
 
     public class MoveUnitCommand : IMoveCommand
     {
+        public Vector3 Position { get; }
+
+        public MoveUnitCommand(Vector3 position)
+        {
+            Position = position;
+        }
+        
 
     }
     public class ProduceUnitCommandHeir : ProduceUnitCommand

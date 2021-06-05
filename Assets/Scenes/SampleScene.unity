@@ -431,6 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c27ada4318ab84681f92c4b9ba4d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentGroundPosition: {fileID: 11400000, guid: d2afa49f490e1594e9db3e6a976e9fd3, type: 2}
   _context: {fileID: 11400000, guid: 76894bd7815955245936f3e6d2ec3dfa, type: 2}
 --- !u!1 &379171038
 GameObject:
@@ -2864,7 +2865,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _item: {fileID: 11400000, guid: 0e8ee7e92c93c0e4abc6056e4bc20426, type: 2}
   _view: {fileID: 2128484929}
-  _context: {fileID: 11400000, guid: 76894bd7815955245936f3e6d2ec3dfa, type: 2}
 --- !u!114 &5523686899594976025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6514,6 +6514,7 @@ GameObject:
   - component: {fileID: 9059006090583828661}
   - component: {fileID: 9059006090583828659}
   - component: {fileID: 9059006090583828663}
+  - component: {fileID: 9059006090583828664}
   m_Layer: 0
   m_Name: MainBuilding
   m_TagString: Untagged
@@ -6567,8 +6568,6 @@ MonoBehaviour:
   _icon: {fileID: 21300000, guid: 7a1fcae8d6a440742bde47c4be93075c, type: 3}
   _health: 500
   _maxHealth: 1000
-  _minDistanceUnit: 4
-  _maxDistanceUnit: 6
 --- !u!1 &9059006090583828662
 GameObject:
   m_ObjectHideFlags: 0
@@ -6606,6 +6605,20 @@ MonoBehaviour:
   _isMaterialSelection: 1
   _isOutlineSelection: 1
   _isCircleSelection: 1
+--- !u!114 &9059006090583828664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9059006090583828658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70ac40760324fdba253b9e461daa60f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _minDistanceUnit: 2
+  _maxDistanceUnit: 3
 --- !u!4 &9059006090584192144
 Transform:
   m_ObjectHideFlags: 0

@@ -11,9 +11,10 @@ namespace InputSystem.UI.Model
         [Inject] private CommandCreatorBase<IMoveCommand> _moveCommandCreator;
         //[Inject] private CommandCreatorBase<IAttackCommand> _attackCommandCreator;
 
-        private bool isPending;
+        private bool _isPending;
         public void HandleClick(ICommandExecutor executor)
         {
+            _isPending = true;
             //_produceUnitCommandCreator.CreateCommand(executor, command => ExecuteSpecificCommand(executor,command));
             _produceUnitEllenCommandCreator.CreateCommand(executor, command => ExecuteSpecificCommand(executor, command));
             _produceUnitChomperCommandCreator.CreateCommand(executor, command => ExecuteSpecificCommand(executor, command));
@@ -23,6 +24,7 @@ namespace InputSystem.UI.Model
         private void ExecuteSpecificCommand(ICommandExecutor executor,ICommand command)
         {
             executor.Execute(command);
+            _isPending = false;
         }
     }
 }

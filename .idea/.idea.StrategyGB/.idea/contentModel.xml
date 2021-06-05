@@ -937,7 +937,8 @@
             <e p="BaseBuilding.cs" t="Include" />
             <e p="CommandExecutors" t="Include">
               <e p="AttackCommand.cs" t="Include" />
-              <e p="MoveCommand.cs" t="Include" />
+              <e p="MoveUnitExecutor.cs" t="Include" />
+              <e p="ProduceUnitEllenExecutor.cs" t="Include" />
             </e>
             <e p="Core.asmdef" t="Include" />
             <e p="MainBuilding.cs" t="Include" />

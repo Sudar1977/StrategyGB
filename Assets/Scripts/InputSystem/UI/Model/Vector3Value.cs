@@ -11,8 +11,8 @@ namespace InputSystem.UI.Model
         public void SetValue(Vector3 value)
         {
             _currentValue = value;
-            onSelected?.Invoke();
+            onChanged?.Invoke();
         }
-        public Action onSelected;
+        public Action onChanged;
     }
 }
