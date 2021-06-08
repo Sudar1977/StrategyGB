@@ -164,8 +164,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1.7
+  m_Radius: 0.62
+  m_Height: 2.19
   m_Direction: 1
   m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!114 &-3699685136444862639
@@ -184,8 +184,8 @@ MonoBehaviour:
   - {fileID: 8941887837643847952}
   _outlineMaterial: {fileID: 2100000, guid: 78709a981febc92439be3f83ee31243e, type: 2}
   _circle: {fileID: 903554175749301711}
-  _isMaterialSelection: 1
-  _isOutlineSelection: 1
+  _isMaterialSelection: 0
+  _isOutlineSelection: 0
   _isCircleSelection: 1
 --- !u!114 &7504001906849950965
 MonoBehaviour:
