@@ -6,12 +6,12 @@ using Zenject;
 
 namespace InputSystem.UI.Model
 {
-    public abstract class CommandCreatorBase <T> where T : ICommand
+    public abstract class CommandCreatorBase<T> where T : ICommand
     {
         public void CreateCommand(ICommandExecutor commandExecutor, Action<T> onCreate)
         {
             var classSpecificExecutor = commandExecutor as CommandExecutorBase<T>;
-            if(classSpecificExecutor != null)
+            if (classSpecificExecutor != null)
             {
                 CreateSpecificCommand(onCreate);
             }
@@ -36,9 +36,9 @@ namespace InputSystem.UI.Model
         {
             onCreate?.Invoke(_context.Inject(new ProduceUnitChomperCommand()));
         }
-    }    
-    
-    
+    }
+
+
     public class MoveCommandCreator : CommandCreatorBase<IMoveCommand>
     {
         [Inject] private AssetContext _context;
@@ -58,6 +58,15 @@ namespace InputSystem.UI.Model
         protected override void CreateSpecificCommand(Action<IMoveCommand> onCreate)
         {
             _onCreate = onCreate;
+        }
+    }
+
+    public class AttackCommandCreator : CommandCreatorBase<IAttackCommand>
+    {
+        [Inject] private AssetContext _context;
+        protected override void CreateSpecificCommand(Action<IAttackCommand> onCreate)
+        {
+            onCreate?.Invoke(_context.Inject(new AttackUnitCommand()));
         }
     }
 }

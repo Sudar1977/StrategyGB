@@ -15,6 +15,7 @@ namespace InputSystem.UI.Model
             Container.Bind<CommandCreatorBase<IProduceUnitEllenCommand>>().To<ProduceUnitElenCommandCreator>().AsTransient();
             Container.Bind<CommandCreatorBase<IProduceUnitChomperCommand>>().To<ProduceUnitChopmperCommandCreator>().AsTransient();
             Container.Bind<CommandCreatorBase<IMoveCommand>>().To<MoveCommandCreator>().AsTransient();
+            Container.Bind<CommandCreatorBase<IAttackCommand>>().To<AttackCommandCreator>().AsTransient();
             
             Container.Bind<ButtonPanel>().AsTransient();
             Container.Bind<Vector3Value>().FromInstance(_currentGroundPosition).AsSingle();
