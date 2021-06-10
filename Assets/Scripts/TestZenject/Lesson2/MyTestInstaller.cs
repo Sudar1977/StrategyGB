@@ -6,7 +6,7 @@ public class MyTestInstaller : MonoInstaller
     public override void InstallBindings()
     {
         Container.Bind<string>().FromInstance("Hellow world");
-        Container.Bind<Test>().AsSingle().NonLazy();
+        Container.Bind<Test>().AsSingle().NonLazy(); 
     }
 }
 

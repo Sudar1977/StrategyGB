@@ -14,5 +14,5 @@ public class SelectedItem : ScriptableObject
         onSelected?.Invoke();
     }
 
-    public Action onSelected;
+    public event Action onSelected;
 }
