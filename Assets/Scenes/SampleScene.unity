@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 3b6ecca63055603479ac072f0c140a91, type: 2}
 --- !u!1 &33085465
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,7 +593,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &389374780
 MeshCollider:
@@ -1095,7 +1095,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &514530106
 MeshCollider:
@@ -1191,7 +1191,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &536382642
 MeshCollider:
@@ -1936,7 +1936,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1025950379
 MeshCollider:
@@ -2098,7 +2098,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1384601682
 MeshCollider:
@@ -2452,7 +2452,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &1779614886
 MeshCollider:
@@ -6498,8 +6498,8 @@ GameObject:
   m_Name: VegetationLarge01_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!1 &9059006090583828658
 GameObject:
@@ -6550,8 +6550,8 @@ GameObject:
   m_Name: VegetationLarge01_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &9059006090583828661
 MonoBehaviour:
@@ -6583,8 +6583,8 @@ GameObject:
   m_Name: VegetationLarge01_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &9059006090583828663
 MonoBehaviour:
@@ -6617,8 +6617,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70ac40760324fdba253b9e461daa60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minDistanceUnit: 6
-  _maxDistanceUnit: 7
+  _minDistanceUnit: 1
+  _maxDistanceUnit: 3
+  ShiftForvard: 4
 --- !u!4 &9059006090584192144
 Transform:
   m_ObjectHideFlags: 0
@@ -7022,8 +7023,8 @@ GameObject:
   m_Name: VegetationLarge02_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &9140372614939368835
 MonoBehaviour:
@@ -7055,8 +7056,8 @@ GameObject:
   m_Name: VegetationLarge02_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &9140372614939368837
 MonoBehaviour:
@@ -7092,8 +7093,8 @@ GameObject:
   m_Name: VegetationLarge02_LOD02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!114 &9140372614939368839
 MonoBehaviour:
@@ -7107,6 +7108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8877bff17a7016499afc2a69f4b44f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShiftForvard: 3
 --- !u!4 &9140372614939460000
 Transform:
   m_ObjectHideFlags: 0

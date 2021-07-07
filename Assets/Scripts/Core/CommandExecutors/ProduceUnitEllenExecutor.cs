@@ -7,6 +7,7 @@ namespace Core
     {
         [SerializeField] private float _minDistanceUnit=2;
         [SerializeField] private float _maxDistanceUnit=3;
+        [SerializeField] private float ShiftForvard = 3.0f;
 
         private float _coordinate => Random.Range(-_maxDistanceUnit, _maxDistanceUnit);
 
@@ -23,7 +24,7 @@ namespace Core
             }
             var position = new Vector3(x + parentPosition.x, 0, y + parentPosition.z);// + transform.parent.position;
 
-            Instantiate(Prefab, position, Quaternion.identity, transform.parent);
+            Instantiate(Prefab, position + Vector3.forward * ShiftForvard, Quaternion.identity, transform.parent);
         }         
 
         protected override void ExecuteConcreteCommand(IProduceUnitEllenCommand command)

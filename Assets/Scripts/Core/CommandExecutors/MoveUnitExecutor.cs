@@ -1,17 +1,17 @@
 ﻿using System.Collections;
 using Abstractions;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Core
 {
     public class MoveUnitExecutor : CommandExecutorBase<IMoveCommand>
     {
-
+        [SerializeField] NavMeshAgent _agent;
 
         protected override void ExecuteConcreteCommand(IMoveCommand command)
         {
-            //ToDo сделать плавное перемещение во времени
-            transform.position = command.Position;
+            _agent.SetDestination(command.Position);
             Debug.Log("MoveCommand");
         }
     }
