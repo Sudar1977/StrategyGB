@@ -1,6 +1,5 @@
+using InputSystem.UI.Model;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
@@ -34,7 +33,7 @@ namespace InputSystem.UI.Presenter
         protected void Start()
         {
             reflectionFields();
-            _item.onSelected += UpdateView;
+            _item.onChanged += UpdateView;
             UpdateView();
         }
 

@@ -1,4 +1,5 @@
 ﻿using Abstractions;
+using InputSystem.UI.Model;
 using InputSystem.UI.View;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ namespace InputSystem.UI.Presenter
         // Use this for initialization
         protected void Start()
         {
-            _currentSelection.onSelected += UpdateOutline;
+            _currentSelection.onChanged += UpdateOutline;
             UpdateOutline();
         }
 

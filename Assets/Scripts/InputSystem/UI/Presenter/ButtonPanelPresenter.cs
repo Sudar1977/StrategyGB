@@ -19,7 +19,7 @@ namespace InputSystem.UI.Presenter
         // Use this for initialization
         void Start()
         {
-            _item.onSelected += SetButtons;
+            _item.onChanged += SetButtons;
             SetButtons();
             _view.onClick += HandleClick;
         }

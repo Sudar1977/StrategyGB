@@ -42,24 +42,12 @@ namespace InputSystem.UI.Model
     public class MoveCommandCreator : CommandCreatorBase<IMoveCommand>
     {
         [Inject] private AssetContext _context;
-
-        private Action<IMoveCommand> _onCreate;
-        private Vector3Value _currentGroundPosition;
+        [Inject] private Vector3Value _currentGroundPosition;
         
-        [Inject]
-        private void Init(Vector3Value currentGroundPosition)
+        protected  override async void CreateSpecificCommand(Action<IMoveCommand> onCreate)
         {
-            _currentGroundPosition = currentGroundPosition;
-            currentGroundPosition.onChanged += HandleGroundPostionCChanged;
-        }
-        private void HandleGroundPostionCChanged()
-        {
-            _onCreate?.Invoke(_context.Inject(new MoveUnitCommand(_currentGroundPosition.Value)));
-        }
-
-        protected override void CreateSpecificCommand(Action<IMoveCommand> onCreate)
-        {
-            _onCreate = onCreate;
+            var nextClick = await _currentGroundPosition.GetNextValue();
+            onCreate?.Invoke(_context.Inject(new MoveUnitCommand(nextClick)));
         }
     }
 

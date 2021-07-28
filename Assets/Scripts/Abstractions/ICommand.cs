@@ -7,7 +7,7 @@ namespace Abstractions
 
     }
 
-    public interface IProduceUnitCommand : ICommand
+    public interface IProduceUnitCommand : ICommand  
     {
         GameObject UnitPrefab { get; }
     }
@@ -18,7 +18,7 @@ namespace Abstractions
     }
     public interface IProduceUnitChomperCommand : ICommand
     {
-        GameObject UnitPrefab { get; }
+        GameObject UnitPrefab { get; } 
     }
 
     public interface IMoveCommand : ICommand

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 387100202279905515}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.182, z: -0}
-  m_LocalScale: {x: 5, y: 14, z: 1}
+  m_LocalScale: {x: 5, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 2148568442428950788}
   m_RootOrder: 2
@@ -1841,7 +1841,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: c30dd1fe2136e1748af319e97743bebd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1863,8 +1863,8 @@ MonoBehaviour:
   - {fileID: 2148568442423253030}
   _outlineMaterial: {fileID: 2100000, guid: 78709a981febc92439be3f83ee31243e, type: 2}
   _circle: {fileID: 3616324877276069056}
-  _isMaterialSelection: 1
-  _isOutlineSelection: 1
+  _isMaterialSelection: 0
+  _isOutlineSelection: 0
   _isCircleSelection: 1
 --- !u!65 &2148568442428462377
 BoxCollider:
