@@ -17,18 +17,28 @@ namespace InputSystem.UI.Model
 
         public event Action onChanged;
 
+        //так делать не стоит
+        //public Task<T> GetNextValue()
+        //{
+        //    var task = new Task<T>(() => 
+        //    {
+        //        onChanged = null;
+        //        return _currentValue;
+        //    });
+        //    onChanged += () => task.Start(); 
+        //    return task;
+        //}
+
         public Task<T> GetNextValue()
         {
-            var task = new Task<T>(() => 
+            var task = new TaskCompletionSource<T>();
+            onChanged += () =>
             {
+                task.SetResult(_currentValue);
                 onChanged = null;
-                return _currentValue;
-            });
-            //task.Start();
-            onChanged += () => task.Start(); //висит 51:44
-
-            return task;
-
+            };
+            return task.Task;
         }
+
     }
 }
